@@ -12,7 +12,7 @@ use RuntimeException;
 /**
  * Utility functions to setup a worker server
  *
- * @property ProcessManagementTask ProcessManager
+ * @property \ProcessManager\Shell\Task\ProcessManagerTask ProcessManager
  */
 class RabbitMQWorkerTask extends Shell
 {
@@ -24,7 +24,7 @@ class RabbitMQWorkerTask extends Shell
      *
      * @var array
      */
-    public $tasks = ['ProcessManager'];
+    public $tasks = ['ProcessManager.ProcessManager'];
 
     /**
      * Changed by the signal handler
