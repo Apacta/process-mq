@@ -12,7 +12,7 @@ use RuntimeException;
 /**
  * Utility functions to setup a worker server
  *
- * @property ProcessManagementTask ProcessManager
+ * @property ProcessManagerTask ProcessManager
  */
 class RabbitMQWorkerTask extends Shell
 {
@@ -46,6 +46,7 @@ class RabbitMQWorkerTask extends Shell
      * @param string $config
      * @param callable $callable
      * @return void
+     * @throws \Exception
      */
     public function consume($config, callable $callable)
     {
@@ -62,6 +63,7 @@ class RabbitMQWorkerTask extends Shell
      * @param \AMQPQueue $queue
      * @param callable $callable
      * @return void
+     * @throws \Exception
      */
     protected function _consume(AMQPQueue $queue, callable $callable)
     {
@@ -81,6 +83,7 @@ class RabbitMQWorkerTask extends Shell
      * @param \AMQPEnvelope $envelope
      * @param \AMQPQueue $queue
      * @return boolean
+     * @throws \AMQPChannelException
      * @throws \Exception
      * @throws \RuntimeException
      */

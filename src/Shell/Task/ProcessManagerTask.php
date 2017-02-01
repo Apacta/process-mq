@@ -25,7 +25,7 @@ use Exception;
  *
  * @author Christian Winther <jippignu@gmail.com>
  */
-class ProcessManagementTask extends Shell
+class ProcessManagerTask extends Shell
 {
     /**
      * We need our lock file to be stored as a class property so it
