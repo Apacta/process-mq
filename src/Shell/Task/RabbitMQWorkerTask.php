@@ -24,7 +24,9 @@ class RabbitMQWorkerTask extends Shell
      *
      * @var array
      */
-    public $tasks = ['ProcessManager'];
+    public $tasks = [
+        'ProcessMQ.ProcessManager'
+    ];
 
     /**
      * Changed by the signal handler
